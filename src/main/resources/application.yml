@@ -1,0 +1,38 @@
+server:
+  port: 8087
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
+#spring:
+#  datasource:
+#    password: password
+#    url: jdbc:mysql://localhost:3306/lc?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+spring:
+  application:
+    name: medical-history-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #    JDBC : SGDB :// HOST : PORT / DB
+    url: jdbc:postgresql://medical-history.ckanpx20f3i1.us-east-2.rds.amazonaws.com:5432/medical_histories
+    username: postgres
+    password: administrador
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
