@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MedicalHistoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MedicalHistoryApplication.class, args);
+
+    SpringApplication.run(MedicalHistoryApplication.class, args);
 	}
 
 }
